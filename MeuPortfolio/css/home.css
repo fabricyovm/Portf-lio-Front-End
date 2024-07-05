@@ -1,67 +1,142 @@
+/* Containers principais */
+
 .container-principal {
-    width: 100%;
+    width: 75%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    width: 14vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
 }
 
 .container-apresentacao {
     display: flex;
-    width: 75%;
-    height: 70vh;
-    align-items: center;
-    gap: 100px;  
+    width: 100%;
+    height: 55vh;
+    gap: 50px;    
 }
 
-.apresentacao {
-    position: relative;
-    height: 100%;
+/* Box do texto de apresentação */
+
+.box-txt-apresentacao {
+    width: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.meu-avatar {   
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-h1 {   
-    color: #3a3a3a;
-    font-size: 50pt;
-}
-
-h2 { 
-    margin-bottom: 10px;
-    color: #3a3a3a;
-    font-size: 25pt;
-}
-
-.txt-apresentacao {
+    justify-content: space-between;
     text-align: justify;
-    font-size: 18pt;
-    margin: 20px 0;
+    font-size: 16pt;
+}
+
+h1.bem-vindo {   
+    color: #3a3a3a;
+    font-size: 45pt;
+}
+
+h2.meu-nome { 
+    margin-bottom: 15px;
+    color: #3a3a3a;
+    font-size: 20pt;
 }
 
 .btn-saber-mais {
     padding: 10px;
-    width: 250px;
-    font-size: 17pt;
-    background-color: #ffffff;
-    border: 1px solid #aaa;
+    width: 200px;
+    font-size: 16pt;
+    background-color: #eee;
+    border: 1px solid #ccc;
     color: #aaa;
     border-radius: 50px;   
     transition: 0.6s; 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px 2px #d3d3d3; 
 }
 
 .btn-saber-mais:hover {
     border: 1px solid #000;
     color: #000;
     cursor: pointer;
+    box-shadow: none;    
+}
+
+/* Box redes sociais */
+
+.box-redes-sociais {
+    width: 35%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px #ddd;
+}
+
+h1.txt-redes-sociais {
+    font-size: 18pt;   
+}
+
+.icones-redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-github,
+.icone-whatsapp,
+.icone-linkedin {
+    font-size: 42px;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.icone-github {
+    color: #eee;    
+    background-color: #171515;
+    border: 1px solid #171515;
+}
+
+.icone-github:hover {
+    color: #171515;    
+    background-color: #eee;
+}
+
+.icone-linkedin {
+    color: #eee;
+    background-color: #0e76a8;
+    border: 1px solid #0e76a8;
+}
+
+.icone-linkedin:hover  {
+    color: #0e76a8;    
+    background-color: #eee;   
+}
+
+.icone-whatsapp {
+    color: #eee;
+    background-color: #25D366;
+    border: 1px solid #25D366;
+}
+
+.icone-whatsapp:hover {
+    color: #25D366;    
+    background-color: #eee;
+}
+
+.download-curriculo:hover {
+    font-weight: bold;
 }

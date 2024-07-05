@@ -3,10 +3,16 @@
     src: url(../fonts/MondaySans.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: codec;
+    src: url(../fonts/Codec-Cold-light-trial.ttf) format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #000000;  
-    font-family: proggy;
+    font-family: codec;
+    background-color: #eee;
 }
