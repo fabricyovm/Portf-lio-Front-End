@@ -1,5 +1,14 @@
-/* Containers principais */
+/* Cores padrões */
+:root {
+    --cor-background-padrao: #eeeeee;
+    --cor-texto-padrao: #3a3a3a;
+    --cor-preto: #000000;
+    --cor-linkedin: #0e76a8;
+    --cor-github: #171515;
+    --cor-whatsapp: #25D366;
+}
 
+/* Container que agrupa todos elementos da página */
 .container-principal {
     width: 75%;
     height: 100vh;
@@ -28,7 +37,6 @@
 }
 
 /* Box do texto de apresentação */
-
 .box-txt-apresentacao {
     width: 65%;
     display: flex;
@@ -38,39 +46,36 @@
     font-size: 16pt;
 }
 
-h1.bem-vindo {   
-    color: #3a3a3a;
+h1.bem-vindo {    
     font-size: 45pt;
 }
 
 h2.meu-nome { 
     margin-bottom: 15px;
-    color: #3a3a3a;
     font-size: 20pt;
 }
 
+/* Botão para saber mais */
 .btn-saber-mais {
-    padding: 10px;
-    width: 200px;
-    font-size: 16pt;
-    background-color: #eee;
+    padding: 10px 20px;
+    font-size: 1.2rem;
     border: 1px solid #ccc;
-    color: #aaa;
-    border-radius: 50px;   
-    transition: 0.6s; 
+    border-radius: 50px; 
     margin: 0 auto;
-    box-shadow: 0px 0px 5px 2px #d3d3d3; 
+    box-shadow: 0px 0px 5px 2px #d3d3d3;
+    color: #aaa;
+    transition: 0.6s;
+    text-decoration: none;
 }
 
 .btn-saber-mais:hover {
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid var(--cor-preto);
     cursor: pointer;
-    box-shadow: none;    
+    box-shadow: none;
+    color: var(--cor-preto);  
 }
 
 /* Box redes sociais */
-
 .box-redes-sociais {
     width: 35%;
     border: 1px solid #ccc;
@@ -87,6 +92,7 @@ h1.txt-redes-sociais {
     font-size: 18pt;   
 }
 
+/* Container das redes sociais */
 .icones-redes-sociais {
     display: flex;
     justify-content: center;
@@ -104,39 +110,43 @@ h1.txt-redes-sociais {
     transition: 0.4s;
 }
 
+/* Ícone GitHub */
 .icone-github {
-    color: #eee;    
-    background-color: #171515;
-    border: 1px solid #171515;
+    color: var(--cor-background-padrao);    
+    background-color: var(--cor-github);
+    border: 1px solid var(--cor-github);
 }
 
 .icone-github:hover {
-    color: #171515;    
-    background-color: #eee;
+    color: var(--cor-github);    
+    background-color: var(--cor-background-padrao);
 }
 
+/* Ícone Linkedin */
 .icone-linkedin {
-    color: #eee;
-    background-color: #0e76a8;
-    border: 1px solid #0e76a8;
+    color: var(--cor-background-padrao);
+    background-color: var(--cor-linkedin);
+    border: 1px solid var(--cor-linkedin);
 }
 
 .icone-linkedin:hover  {
-    color: #0e76a8;    
-    background-color: #eee;   
+    color: var(--cor-linkedin);    
+    background-color: var(--cor-background-padrao);   
 }
 
+/* Ícone WhatsApp */
 .icone-whatsapp {
-    color: #eee;
-    background-color: #25D366;
-    border: 1px solid #25D366;
+    color: var(--cor-background-padrao);
+    background-color: var(--cor-whatsapp);
+    border: 1px solid var(--cor-whatsapp);
 }
 
 .icone-whatsapp:hover {
-    color: #25D366;    
-    background-color: #eee;
+    color: var(--cor-whatsapp);    
+    background-color: var(--cor-background-padrao);
 }
 
+/* Link para download do currículo */
 .download-curriculo:hover {
-    font-weight: bold;
+    font-weight: bold;    
 }
