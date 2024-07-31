@@ -64,6 +64,7 @@ menuHamburguer.addEventListener('click', () => {
     }
 });
 
+
 /* ------------- Botão "Ver Mais" em 'Projetos' ------------- */
 btnMaisProjetos.addEventListener('click', () => {
     let section = document.querySelector('.section-projetos');
@@ -77,7 +78,6 @@ btnMaisProjetos.addEventListener('click', () => {
 
     btnMaisProjetos.textContent = "Ver mais";
 });
-
 
 
 /* ------------- Botão "Ler mais" em 'Sobre Mim' ------------- */

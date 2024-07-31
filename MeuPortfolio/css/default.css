@@ -1,3 +1,4 @@
+/* ------------- Google Font ------------- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 .roboto-mono-regular {
@@ -7,6 +8,7 @@
     font-style: normal;
   }
 
+/* ------------- Variáveis CSS ------------- */
 :root {
     --cor-background-padrao: #14161a;
     --cor-texto-padrao: #dddddd;
@@ -22,6 +24,7 @@
     --cor-html: #009dff;
 }
 
+/* ------------- Definições Padrões ------------- */
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +46,7 @@ li {
     list-style: none;
 }
 
-/* ----------- 'Logo' ----------- */
+/* ----------- Logo ----------- */
 .logo div {
     display: flex;
     flex-wrap: nowrap;  
@@ -71,7 +74,7 @@ li {
     color: #777676;
 }
 
-/* ----------- 'Icones Redes Sociais para o footer' ----------- */
+/* ----------- Ícones Redes Sociais para o footer ----------- */
 
 .icones-footer {
     display: flex;
@@ -138,7 +141,6 @@ li {
 }
 
 /* ----------- 'Ajustes dos ícones das redes sociais para o index.html' ----------- */
-
 .icones-footer-vertical {
     display: flex;
     flex-direction: column;
