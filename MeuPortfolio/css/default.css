@@ -1,20 +1,14 @@
-.roboto-mono {
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.roboto-mono-regular {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
   }
 
-  .dm-mono-medium {
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
-    font-style: normal;
-  }
-
 :root {
-    /*--cor-background-padrao: #0d1117;
-    --cor-texto-padrao: #dddddd;*/
-    --cor-background-padrao: #0d1117;
+    --cor-background-padrao: #14161a;
     --cor-texto-padrao: #dddddd;
     --cor-branco: #ffffff;
     --cor-preto: #000000;

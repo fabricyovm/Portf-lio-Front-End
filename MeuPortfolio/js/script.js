@@ -42,6 +42,14 @@ navItem.forEach((link) => {
 });
 
 
+/* ------------- Botão Para Alternar Modo Dark/Light ------------- */
+btnTema.addEventListener('click', () => {   
+    let containerPrincipal = document.querySelector('.container-principal');
+
+    containerPrincipal.classList.toggle('modo-light');
+});
+
+
 /* ------------- Menu Hamburguer ------------- */
 menuHamburguer.addEventListener('click', () => {
     let nav = document.querySelector('.navegacao');
@@ -56,7 +64,6 @@ menuHamburguer.addEventListener('click', () => {
     }
 });
 
-
 /* ------------- Botão "Ver Mais" em 'Projetos' ------------- */
 btnMaisProjetos.addEventListener('click', () => {
     let section = document.querySelector('.section-projetos');
@@ -70,6 +77,7 @@ btnMaisProjetos.addEventListener('click', () => {
 
     btnMaisProjetos.textContent = "Ver mais";
 });
+
 
 
 /* ------------- Botão "Ler mais" em 'Sobre Mim' ------------- */
@@ -87,12 +95,4 @@ lerMais.addEventListener('click', () => {
         lerMais.textContent = "Ler mais";
         pontinhos.textContent = "...";
     }    
-});
-
-
-/* ------------- Botão Para Alternar Modo Dark/Light ------------- */
-btnTema.addEventListener('click', () => {   
-    let containerPrincipal = document.querySelector('.container-principal');
-
-    containerPrincipal.classList.toggle('modo-light');
 });

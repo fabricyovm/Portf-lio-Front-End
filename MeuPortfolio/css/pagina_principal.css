@@ -111,11 +111,8 @@
     background-color: var(--cor-background-padrao);
     font-size: 2rem;
     padding: 0 40px;  
-    position: absolute;                
+    position: absolute;             
 }
-
-
-
 
 /* ---------- Aba "Habilidades" ---------- */
 
@@ -134,12 +131,13 @@
     flex-direction: column;    
     width: 300px;   
     height: 450px;  
-    border: 1px solid var(--cor-roxo);
+    border: 2px solid var(--cor-roxo);
     padding: 10px;
     position: relative;
-    box-shadow: 5px 5px 10px 1px var(--cor-preto);
+    box-shadow: 5px 5px 10px 1px #0a0a0a;
+    border-radius: 15px;
     background-color: var(--cor-background-padrao);
-    transition: 0.6s;
+    transition: background-color 0.4s;
 }
 
 .card-linguagens .linguagem {
@@ -164,7 +162,7 @@
     font-size: 40px;
     color: var(--cor-roxo);
     margin-bottom: 10px;
-    font-weight: 100;
+    font-weight: 400;
     word-wrap: break-word;  
 }
 
@@ -175,7 +173,7 @@
 .card-linguagens .txt-linguagem {
     padding: 20px;
     overflow: auto;
-    font-size: 1.2rem;   
+    font-size: 1.1rem;   
 }
 
 .simbolos-html {
@@ -212,10 +210,12 @@
 
 .section-projetos::after {
     content: '';
-    width: 100%;
+    width: 90%;
     background: linear-gradient(to top, var(--cor-background-padrao) 40%, transparent);
     height: 60%;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     transition: 0.4s ease-in-out;
 }
@@ -340,9 +340,6 @@
     display: none;
 }
 
-
-
-
 /* ---------- Footer ---------- */
 
 .footer {
@@ -361,11 +358,16 @@
  /* ---------- Site Modo Light ---------- */
 
  .btn-tema {
-    cursor: pointer;    
+    cursor: pointer;     
+    transition: 0.4s;   
+}
+
+.btn-tema:hover {
+    transform: scale(1.2);
 }
 
 .container-principal.modo-light .btn-tema {    
-    transform: rotate(180deg);
+    transform: rotateY(180deg);
 }
 
 .container-principal.modo-light .header {
@@ -382,9 +384,21 @@
     background-color: #eee;    
 }
 
+.container-principal.modo-light .chaves-css {
+    color: rgb(51, 255, 0);    
+}
+
+.container-principal.modo-light .comentarios-js {
+    color: green;    
+}
+
 .container-principal.modo-light .section-projetos::after {
-    background: linear-gradient(to top, #eee 60%, transparent);
-} 
+    background: linear-gradient(to top, #eee 40%, transparent);
+}
+
+.container-principal.modo-light .thumb-projeto {
+    background-color: #929292;
+}
 
 .container-principal.modo-light .txt-titulo,
 .container-principal.modo-light .txt-linguagem,
@@ -467,6 +481,10 @@
         border-bottom: 1px solid #3d3d3d;     
     }
 
+    .navegacao ul li:nth-child(5) {
+        border: none;        
+    }
+
     .navegacao .btn-tema {        
         position: absolute;     
         top: 10px;
@@ -474,8 +492,7 @@
     }
 
     .navegacao ul li:hover {
-        background-color: var(--cor-background-padrao);
-        padding: 10px 30px;
+        background-color: none;
     }
 
     .navegacao ul li a {
