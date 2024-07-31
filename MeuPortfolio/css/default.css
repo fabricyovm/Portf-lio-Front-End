@@ -1,23 +1,176 @@
-@font-face {
-    font-family: proggy;
-    src: url(../fonts/MondaySans.ttf) format('truetype');
-}
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
 
-@font-face {
-    font-family: codec;
-    src: url(../fonts/Codec-Cold-light-trial.ttf) format('truetype');
-}
+  .dm-mono-medium {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+  }
 
 :root {
-    --cor-background-padrao: #eeeeee;
-    --cor-texto-padrao: #3a3a3a;
+    /*--cor-background-padrao: #0d1117;
+    --cor-texto-padrao: #dddddd;*/
+    --cor-background-padrao: #0d1117;
+    --cor-texto-padrao: #dddddd;
+    --cor-branco: #ffffff;
+    --cor-preto: #000000;
+    --cor-roxo: #8257e6;
+    --cor-orangered: #ff4500;
+    --cor-linkedin: #0e76a8;
+    --cor-github: #171515;
+    --cor-whatsapp: #25D366;
+    --cor-whatsapp-2: #25d3657e;
+    --cor-footer: #1e2024;
+    --cor-html: #009dff;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--cor-texto-padrao);  
-    font-family: codec;
+    color: var(--cor-texto-padrao);     
+    font-family: "Roboto Mono", monospace;
+    color: var(--cor-texto-padrao);
+}
+
+body {
     background-color: var(--cor-background-padrao);
+}
+
+a {
+    text-decoration: none;   
+}
+
+li {
+    list-style: none;
+}
+
+/* ----------- 'Logo' ----------- */
+.logo div {
+    display: flex;
+    flex-wrap: nowrap;  
+    font-size: max(24px, 2vw);
+    padding: 10px;
+    border: 1px solid var(--cor-html);
+    border-radius: 5px 20px 5px 20px;
+    cursor: pointer;     
+}
+
+.logo .nome,
+.logo .sobrenome {
+    color: var(--cor-orangered);
+    font-size: 1em;    
+}
+
+.logo .sobrenome {
+    margin-left: 10px;
+}
+.logo .simbolo-html {
+    color: var(--cor-html);
+}
+
+.logo .simbolo-barra {
+    color: #777676;
+}
+
+/* ----------- 'Icones Redes Sociais para o footer' ----------- */
+
+.icones-footer {
+    display: flex;
+}
+
+.box-icone {
+    width: 60px;
+    display: flex;  
+    align-items: center;
+    gap: 10px;    
+    overflow: hidden;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;    
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.box-icone:hover i {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+.box-icone:nth-child(1):hover {
+    width: 200px;
+    background-color: var(--cor-whatsapp-2);    
+}
+
+.box-icone:nth-child(2):hover {
+    width: 200px;
+    background-color: var(--cor-github);
+}
+
+.box-icone:nth-child(3):hover {
+    width: 200px;
+    background-color: var(--cor-linkedin);
+}
+
+.box-icone i {
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.4s;   
+}
+
+.whatsapp {        
+    background-color: var(--cor-whatsapp);
+}
+
+.github {
+    color: var(--cor-branco);
+    background-color: var(--cor-github);
+}
+
+.linkedin {    
+    background-color: var(--cor-linkedin);
+}
+
+.e-mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem
+}
+
+/* ----------- 'Ajustes dos ícones das redes sociais para o index.html' ----------- */
+
+.icones-footer-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-margem {
+    margin: 0;
+}
+
+.alterar-cor-github {
+    background-color: var(--cor-footer);
+}
+
+.aumentar-icone {
+    font-size: 2rem;
+    width: 60px;
+}
+
+.aumentar-icone:hover {
+    width: 250px;
+}
+
+.box-icone:nth-child(1).aumentar-icone:hover,
+.box-icone:nth-child(2).aumentar-icone:hover,
+.box-icone:nth-child(3).aumentar-icone:hover {
+    width: 230px;   
 }

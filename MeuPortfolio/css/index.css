@@ -1,0 +1,189 @@
+/* Container que agrupa todos elementos da página */
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {    
+    position: absolute;  
+    top: 40px; 
+}
+
+.container-apresentacao {    
+    width: 90%;    
+    font-size: 1.5rem;    
+}
+
+h1.bem-vindo {
+    font-weight: 100;
+    color: var(--cor-roxo);
+    font-size: max(50px, 4.8vw);
+}
+
+h2.meu-nome {     
+    color: var(--cor-roxo);
+    margin-bottom: 15px;
+    font-size: max(24px, 2.1vw);
+    font-weight: 500;
+}
+
+/* Botão para saber mais */
+
+.box-btn-saber-mais {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-saber-mais {
+    display: inline-block;
+    background-color: var(--cor-roxo);    
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 1px solid var(--cor-roxo);
+    border-radius: 50px;     
+    transition: 0.6s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-saber-mais:hover {
+    background-color: var(--cor-background-padrao);
+    border: 1px solid var(--cor-roxo);
+    cursor: pointer;
+    box-shadow: none;
+    color: var(--cor-roxo);
+}
+
+.redes-sociais-index {
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Link para download do currículo */
+.download-curriculo {
+    text-decoration: underline;
+}
+
+.download-curriculo:hover {
+    color: orangered;   
+}
+
+
+ /* ---------- Site Modo Light ---------- */
+
+ .btn-tema {
+    font-size: 24px;
+    position: absolute;
+    right: 10%;
+    top: 65px;
+    transform: translateY(-50%);
+    cursor: pointer;
+ }
+
+.container-principal.modo-light {
+    background-color: #eee;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header {
+        position: static;  
+        margin-bottom: 40px;       
+    }
+
+    .header-index {
+        margin: 40px 0;
+    }
+
+    .container-principal {
+        display: flex;
+        flex-direction: column;             
+        width: 100%;
+        height: auto;
+        padding: 0 10px;  
+    }
+
+    .icones-footer.redes-sociais-index {
+        position: relative;
+        margin-top: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 900px) {    
+    .icones-footer.redes-sociais-index {
+        position: relative;
+        margin-top: 100px;
+        padding: 10px 0;
+    }
+
+
+    .icones-footer.redes-sociais-index::before{
+        content: '';
+        width: 50%;
+        position: absolute;        
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: var(--cor-roxo);
+        margin: 0 auto;
+    }
+    
+    .redes-sociais-index {
+        position: static;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .btn-saber-mais {
+        width: 90%;
+        padding: 20px 30px;
+        font-size: 1.5rem
+    }
+
+    .redes-sociais-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .box-icone {
+        margin: 10px auto;
+        padding: 5px;        
+    }
+
+    .box-icone i {
+        background-color: var(--cor-branco);
+        color: var(--cor-preto);
+    }
+
+    .box-icone:nth-child(1) {
+        width: 80%;
+        background-color: var(--cor-whatsapp);    
+    }
+    
+    .box-icone:nth-child(2) {
+        width: 80%;
+        background-color: var(--cor-footer);
+    }
+    
+    .box-icone:nth-child(3) {
+        width: 80%;
+        background-color: var(--cor-linkedin);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .redes-sociais-index {
+        flex-direction: column;
+    }
+}
