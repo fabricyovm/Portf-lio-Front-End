@@ -90,14 +90,17 @@ h2.meu-nome {
     transform: scale(1.2);
 }
 
+.container-principal.modo-light .btn-tema {
+    transform: rotateY(180deg); 
+}
+
 .container-principal.modo-light {
     background-color: #eee;
 }
 
 .container-principal.modo-light .container-apresentacao p,
 .container-principal.modo-light .btn-tema {    
-    color: #3d3d3d;   
-    transform: rotateY(180deg); 
+    color: #3d3d3d;       
 }
 
 .container-principal.modo-light .box-icone:nth-child(1):hover {    
