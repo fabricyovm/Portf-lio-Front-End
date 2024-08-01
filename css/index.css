@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;    
-    margin: 0 auto;
     position: relative;
     transition: 0.6s;
 }
@@ -63,18 +62,8 @@ h2.meu-nome {
 
 .redes-sociais-index {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
 }
-
-/* Link para download do currículo */
-.download-curriculo {
-    text-decoration: underline;
-}
-
-.download-curriculo:hover {
-    color: orangered;   
-}
-
 
  /* ---------- Site Modo Light ---------- */
  .btn-tema {
