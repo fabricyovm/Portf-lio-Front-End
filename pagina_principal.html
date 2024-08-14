@@ -6,7 +6,6 @@
     <title>Página Principal</title>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/pagina_principal.css">
-    <link rel="stylesheet" href="css/media-queries.css">
     <script src="js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/77ed705758.js" crossorigin="anonymous"></script>
 </head>
@@ -82,19 +81,16 @@
             <div class="titulo">
                 <span class="txt-titulo">Projetos</span>
             </div>
-            <div class="projetos">
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-                <div class="thumb-projeto"><h1>EM BREVE</h1></div>
-            </div>
-            <div class="mais-projetos">
-                <button class="btn-mais-projetos">Ver mais</button>
-            </div>
+            <div class="container-projetos">
+                <a href="https://todo-list-fabricyovm.vercel.app" target="_blank">
+                    <div class="projeto"><img src="img/projeto-todo-list.png" id="img-todo-list" alt="Projeto Todo List"></div>
+                </a>
+            </div>            
+            <p class="aviso-mais-projetos">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Em breve mais projetos
+            </p>
+            <button id="btn-mais-projetos">Ver Mais</button>
         </section>
         <!-- Sobre Mim -->
         <section class="section-sobre-mim" id="sobre-mim">

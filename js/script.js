@@ -1,5 +1,5 @@
 let menuHamburguer = document.querySelector('.menu-hamburguer');
-let btnMaisProjetos = document.querySelector('.btn-mais-projetos');
+let btnMaisProjetos = document.querySelector('#btn-mais-projetos');
 let lerMais = document.querySelector('#ler-mais');
 let navItem = document.querySelectorAll('.navegacao a[href^="#"]');
 let btnTema = document.querySelector('.btn-tema');
@@ -67,16 +67,20 @@ menuHamburguer.addEventListener('click', () => {
 
 /* ------------- Botão "Ver Mais" em 'Projetos' ------------- */
 btnMaisProjetos.addEventListener('click', () => {
-    let section = document.querySelector('.section-projetos');
+    const avisoMaisProjetos = document.querySelector('.aviso-mais-projetos');
 
-    section.classList.toggle('exibir-projetos');
-    
+    avisoMaisProjetos.classList.toggle('exibir');
 
-    if (section.classList.contains('exibir-projetos')) {
-        return btnMaisProjetos.textContent = "Ver menos";
+    if(avisoMaisProjetos.classList.contains('exibir')) {        
+        btnMaisProjetos.textContent = "Ver Menos"
+        btnMaisProjetos.style.color = "var(--cor-roxo)";
+        btnMaisProjetos.style.background = "none";
     }
-
-    btnMaisProjetos.textContent = "Ver mais";
+    else {
+        btnMaisProjetos.textContent = "Ver Mais";
+        btnMaisProjetos.style.color = "var(--cor-texto-padrao)";
+        btnMaisProjetos.style.background = "var(--cor-roxo)";
+    }
 });
 
 
