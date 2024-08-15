@@ -355,14 +355,15 @@
     background: linear-gradient(to top, #eee 40%, transparent);
 }
 
-.container-principal.modo-light .thumb-projeto {
-    background-color: #929292;
-}
 
 .container-principal.modo-light .txt-titulo,
 .container-principal.modo-light .txt-linguagem,
-.container-principal.modo-light .section-sobre-mim p {    
+.container-principal.modo-light p {    
     color: #3d3d3d;
+}
+
+.container-principal.modo-light .aviso-mais-projetos i {
+    color: var(--cor-orangered);    
 }
 
 .container-principal.modo-light .card-linguagens {
