@@ -208,22 +208,98 @@
 
 .container-projetos {
     width: 100%; 
-    gap: 30px;   
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .projeto {
-    width: 600px; 
-    margin: 0 auto; 
+    width: 450px; 
+    margin: 0 auto;  
+}
+
+.container-imagem-projeto {
+    position: relative;     
+}
+
+.container-imagem-projeto::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #0000007a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.container-imagem-projeto .tecnologias,
+.container-imagem-projeto::before {
+    transition: 0.4s;
+}
+
+.container-imagem-projeto:hover .tecnologias,
+.container-imagem-projeto:hover::before {
+    opacity: 0;
 }
 
 .projeto img { 
+    display: block;
     width: 100%;  
+    border-radius: 10px 10 0 0;
+    position: relative;
+    z-index: 1;    
+}
+
+.tecnologias {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.tecnologias div {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center; 
+    color: var(--cor-roxo);
+    background-color: #000000a1;
+}
+
+.tecnologias div i {
+    color: var(--cor-roxo);
+    font-size: 38px
+}
+
+.nome-projeto {
+    width: 100%;    
+    background-color: #0000004b;
+    border-radius: 0 0 10px 10px;   
+    transition: height 0.4s 0.4s;
+    text-align: center;
+    padding: 10px;
+    font-size: max(22px, 2vw);
+    transform: translateY(-100%);
+    transition: transform 0.4s, opacity 0.4s 0.4s;
+}
+
+.projeto:hover .nome-projeto {    
+    transform: translateY(0);    
 }
 
 .section-projetos .aviso-mais-projetos {   
     height: 0;
     overflow-y: hidden;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 18px;
     text-align: center;
     transition: height 0.2s;
@@ -233,16 +309,16 @@
     height: 30px;
 }
 
-.section-projetos i {
+.aviso-mais-projetos i {
     color: yellow;
 }
 
-#btn-mais-projetos {
+.btn-mais-projetos {
     display: block;
     margin: 1.25rem auto;
     padding: 10px 50px;
     border: 1px solid var(--cor-roxo);
-    background: var(--cor-roxo);    
+    background-color: var(--cor-roxo);    
     border-radius: 30px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -250,9 +326,10 @@
     transition: 0.2s;
 }
 
-#btn-mais-projetos:hover {
+.btn-mais-projetos:hover,
+.btn-mais-projetos.clicado {
     color: var(--cor-roxo);
-    background: none;
+    background-color: transparent;
 }
 
 
@@ -337,9 +414,7 @@
 .container-principal.modo-light,
 .container-principal.modo-light section,
 .container-principal.modo-light .txt-titulo,
-.container-principal.modo-light .card-linguagens,
-.container-principal.modo-light .section-projetos.exibir-projetos .btn-mais-projetos,
-.container-principal.modo-light {    
+.container-principal.modo-light .card-linguagens {    
     background-color: #eee;    
 }
 
@@ -370,7 +445,15 @@
     box-shadow: 5px 5px 5px 1px #ccc;
 }
 
-.container-principal.container-principal.modo-light .navegacao.side-menu a {
+.container-principal.modo-light .nome-projeto {
+    background-color: #000000ef;
+}
+
+.container-principal.modo-light .detalhes-projeto p {
+    color: #eee;
+}
+
+.container-principal.modo-light .navegacao.side-menu a {
     color: #5b5bff;
 }
 
@@ -449,6 +532,10 @@
     .navegacao ul li a::after {
         display: none;
     }
+
+    .nome-projeto {
+        transform: translateY(0);
+    }
 }
 
 
@@ -471,7 +558,13 @@
 @media screen and (max-width: 324px) {
     .navegacao ul li a {
         font-size: 18px;        
-    } 
+    }   
+
+    .tecnologias div {
+        width: 50px;
+        height: auto;
+        background-color: transparent;
+    }
 }
 
 /* -------- Ajusta os ícones das redes sociais -------- */

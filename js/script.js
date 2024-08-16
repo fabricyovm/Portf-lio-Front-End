@@ -1,5 +1,5 @@
 let menuHamburguer = document.querySelector('.menu-hamburguer');
-let btnMaisProjetos = document.querySelector('#btn-mais-projetos');
+let btnMaisProjetos = document.querySelector('.btn-mais-projetos');
 let lerMais = document.querySelector('#ler-mais');
 let navItem = document.querySelectorAll('.navegacao a[href^="#"]');
 let btnTema = document.querySelector('.btn-tema');
@@ -70,19 +70,15 @@ btnMaisProjetos.addEventListener('click', () => {
     const avisoMaisProjetos = document.querySelector('.aviso-mais-projetos');
 
     avisoMaisProjetos.classList.toggle('exibir');
+    btnMaisProjetos.classList.toggle('clicado');
 
     if(avisoMaisProjetos.classList.contains('exibir')) {        
-        btnMaisProjetos.textContent = "Ver Menos"
-        btnMaisProjetos.style.color = "var(--cor-roxo)";
-        btnMaisProjetos.style.background = "none";
+        btnMaisProjetos.textContent = "Ver Menos"        
     }
     else {
         btnMaisProjetos.textContent = "Ver Mais";
-        btnMaisProjetos.style.color = "var(--cor-texto-padrao)";
-        btnMaisProjetos.style.background = "var(--cor-roxo)";
     }
 });
-
 
 /* ------------- Botão "Ler mais" em 'Sobre Mim' ------------- */
 lerMais.addEventListener('click', () => {
