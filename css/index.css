@@ -75,10 +75,6 @@ h2.meu-nome {
     transition: 0.4s;  
  }
 
-.btn-tema:hover {    
-    transform: scale(1.2);
-}
-
 .container-principal.modo-light .btn-tema {
     transform: rotateY(180deg); 
 }

@@ -122,79 +122,125 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 4rem;
     margin-top: 50px;
 }
 
-.card-linguagens {
-    display: flex;
-    flex-direction: column;    
-    width: 300px;   
-    height: 450px;  
-    border: 2px solid var(--cor-roxo);
-    padding: 10px;
-    position: relative;
-    box-shadow: 5px 5px 10px 1px #0a0a0a;
-    border-radius: 15px;
-    background-color: var(--cor-background-padrao);
-    transition: background-color 0.4s;
-}
-
-.card-linguagens .linguagem {
+.icone-linguagem {
+    width: 14rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0000007a;
+    padding: 4rem;
+    border-radius: 5px 5px 40px 5px;    
+}
+
+.icone-linguagem i,
+.icone-linguagem img {
+    transition: filter 300ms;
+}
+
+.icone-linguagem:nth-child(1) {
+    border-left: 5px solid var(--cor-logo-html);
+}
+
+.icone-linguagem:nth-child(2) {
+    border-left: 5px solid var(--cor-logo-css);
+}
+
+.icone-linguagem:nth-child(3) {
+    border-left: 5px solid var(--cor-logo-javascript);
+}
+
+.icone-linguagem i {
+    font-size: 6em;    
+}
+
+.icone-linguagem span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.html5,
+.html5 + span {
+    color: var(--cor-logo-html);
+}
+
+.icone-linguagem:hover .html5 {
+    filter: drop-shadow(0 0 2rem #f2390fa8);
+}
+
+.css3,
+.css3 + span {
+    color: var(--cor-logo-css);
+}
+
+.icone-linguagem:hover .css3 {
+    filter: drop-shadow(0 0 2rem #0583f29d);
+}
+
+.javascript,
+.javascript + span {
+    color: var(--cor-logo-javascript);
+}
+
+.icone-linguagem:hover .javascript {
+    filter: drop-shadow(0 0 2rem #f2cb0581);
+}
+
+
+/* Habilidades em desenvolvimento */
+
+.habilidades-em-desenvolvimento {
     width: 100%;
-    position: relative;
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
 }
 
-.card-linguagens .linguagem::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    background-color: var(--cor-roxo);
-    height: 1px;
-    width: 60%;
+.habilidades-em-desenvolvimento > div {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card-linguagens .linguagem > h1 {
-    font-size: 40px;
-    color: var(--cor-roxo);
-    margin-bottom: 10px;
+.habilidades-em-desenvolvimento h1 {
+    margin-bottom: 4rem;
+    font-size: max(30px, 2vw);
     font-weight: 400;
-    word-wrap: break-word;  
+    text-align: center;
 }
 
-.card-linguagens .linguagem img {   
-    width: max(80px, 8vw);  
+.habilidades-em-desenvolvimento .icone-linguagem {
+    width: 14rem;
+    border-left: 5px solid var(--cor-logo-react);
 }
 
-.card-linguagens .txt-linguagem {
-    padding: 20px;
-    overflow: auto;
-    font-size: 1.1rem;   
+.habilidades-em-desenvolvimento img {
+    width: 6rem;
+    animation: react infinite 20s linear;    
 }
 
-.simbolos-html {
-    color: orangered;
-    font-weight: bolder;
-    font-size: 18px;
+.habilidades-em-desenvolvimento div:hover img {
+    filter: drop-shadow(0 0 2rem #646cffcb);
 }
 
-#asterisco-css {
-    color: #6b6bff;
-    font-size: 20px;    
+.habilidades-em-desenvolvimento div span {
+    color: var(--cor-logo-react);
 }
 
-.chaves-css {
-    color: #fcff3e;
-    font-size: 20px;
-}
-
-.comentarios-js {
-    color: greenyellow;
-    font-size: 20px;
+/* Animação da logo do React */
+@keyframes react {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -397,34 +443,25 @@
     cursor: pointer;     
     transition: 0.4s;   
 }
-
-.btn-tema:hover {
-    transform: scale(1.2);
-}
-
 .container-principal.modo-light .btn-tema {    
     transform: rotateY(180deg);
 }
 
 .container-principal.modo-light .header {
     background-color: var(--cor-footer);
-    border-bottom: 1px solid var(--cor-orangered);
+    border-bottom: 1px solid var(--cor-roxo);
 }
 
 .container-principal.modo-light,
 .container-principal.modo-light section,
-.container-principal.modo-light .txt-titulo,
-.container-principal.modo-light .card-linguagens {    
+.container-principal.modo-light .txt-titulo {    
     background-color: #eee;    
 }
 
-.container-principal.modo-light .chaves-css {
-    color: rgb(51, 255, 0);    
+.container-principal.modo-light .icone-linguagem {
+    background-color: #181818;
 }
 
-.container-principal.modo-light .comentarios-js {
-    color: green;    
-}
 
 .container-principal.modo-light .section-projetos::after {
     background: linear-gradient(to top, #eee 40%, transparent);
@@ -432,17 +469,13 @@
 
 
 .container-principal.modo-light .txt-titulo,
-.container-principal.modo-light .txt-linguagem,
-.container-principal.modo-light p {    
+.container-principal.modo-light p,
+.container-principal.modo-light .habilidades-em-desenvolvimento h1 {    
     color: #3d3d3d;
 }
 
 .container-principal.modo-light .aviso-mais-projetos i {
     color: var(--cor-orangered);    
-}
-
-.container-principal.modo-light .card-linguagens {
-    box-shadow: 5px 5px 5px 1px #ccc;
 }
 
 .container-principal.modo-light .nome-projeto {
@@ -571,5 +604,9 @@
 @media screen and (max-width: 300px) {
     .icones-footer {
         flex-direction: column;
+    }
+
+    .icone-linguagem {
+        width: 80%;
     }
 }
