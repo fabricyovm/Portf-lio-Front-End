@@ -10,8 +10,8 @@
 
 /* ------------- Variáveis CSS ------------- */
 :root {
-    --cor-background-padrao: #14161a;
-    --cor-texto-padrao: #dddddd;
+    --cor-background-dark: #14161a;
+    --cor-background-light: #e5e7eb;
     --cor-branco: #ffffff;
     --cor-preto: #000000;
     --cor-roxo: #8257e6;
@@ -33,13 +33,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--cor-texto-padrao);     
+    color: var(--cor-background-light);     
     font-family: "Roboto Mono", monospace;
-    color: var(--cor-texto-padrao);
+    color: var(--cor-background-light);
 }
 
 body {
-    background-color: var(--cor-background-padrao);
+    background-color: var(--cor-background-dark);
 }
 
 a {

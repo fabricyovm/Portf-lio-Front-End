@@ -53,7 +53,7 @@ h2.meu-nome {
 }
 
 .btn-saber-mais:hover {
-    background-color: var(--cor-background-padrao);
+    background-color: var(--cor-background-dark);
     border: 1px solid var(--cor-roxo);
     cursor: pointer;
     box-shadow: none;
@@ -80,7 +80,7 @@ h2.meu-nome {
 }
 
 .container-principal.modo-light {
-    background-color: #eee;
+    background-color: var(--cor-background-light);
 }
 
 .container-principal.modo-light .container-apresentacao p,
@@ -93,7 +93,7 @@ h2.meu-nome {
 }
 
 .container-principal.modo-light .btn-saber-mais:hover {
-    background-color: #eee;
+    background-color: var(--cor-background-light);
 }
 
 @media screen and (max-width: 1200px) {

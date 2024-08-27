@@ -1,7 +1,7 @@
 .container-principal {
     width: 100%;   
     padding-top: 150px;
-    background-color: var(--cor-background-padrao);
+    background-color: var(--cor-background-dark);
 }
 
 
@@ -17,7 +17,7 @@
     font-size: 20px;
     border-bottom: 1px solid var(--cor-roxo);
     padding: 10px 0;
-    background-color: var(--cor-background-padrao);   
+    background-color: var(--cor-background-dark);   
 }
 
 .container-header {
@@ -108,7 +108,7 @@
 }
 
 .txt-titulo {    
-    background-color: var(--cor-background-padrao);
+    background-color: var(--cor-background-dark);
     font-size: 2rem;
     padding: 0 40px;  
     position: absolute;             
@@ -455,18 +455,12 @@
 .container-principal.modo-light,
 .container-principal.modo-light section,
 .container-principal.modo-light .txt-titulo {    
-    background-color: #eee;    
+    background-color: var(--cor-background-light);
 }
 
 .container-principal.modo-light .icone-linguagem {
     background-color: #181818;
 }
-
-
-.container-principal.modo-light .section-projetos::after {
-    background: linear-gradient(to top, #eee 40%, transparent);
-}
-
 
 .container-principal.modo-light .txt-titulo,
 .container-principal.modo-light p,
@@ -483,7 +477,7 @@
 }
 
 .container-principal.modo-light .detalhes-projeto p {
-    color: #eee;
+    color: var(--cor-background-light);
 }
 
 .container-principal.modo-light .navegacao.side-menu a {
